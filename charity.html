@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="charity.css">
+
+  <meta charset="UTF-8">
+  <title>Six Degree Charity</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background-color: #008080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      width: 100%;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    p, li {
+      color: #444;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+      nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+      .donate-link {
+      display: block;
+      text-align: center;
+      font-size: 1.2em;
+      background-color: #007b7f;
+      padding: 12px;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      margin: 30px auto;
+      width: fit-content;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+    }
+    .slideshow {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+    <header>
+    <h1>Six Degree Charity</h1>
+    <nav>
+    
+  </header><!-- SLIDESHOW START -->
+    <div class="slideshow">
+      <img id="slide" src="img/cc4.jpg" alt="Slideshow Image">
+    </div>
+    <!-- SLIDESHOW END -->
+
+    <h1>What is Six Degree Charity About?</h1>
+    <p>
+      A charitable nonprofit organization aimed at bringing smiles to faces worldwide. We focus on rebuilding and providing essential services for a better life.
+    </p>
+
+    <img src="img/cc4.jpg" alt="Movement in rural area">
+    <p>Our movement in a rural area.</p>
+
+    <img src="img/cc5.jpg" alt="Organization in a happy mood">
+    <p>A mood that got our organization feeling happy.</p>
+
+    <img src="img/wc2.png" alt="Team photo">
+
+    <h1>To Donate <a href="PAYMENT.html">CLICK HERE</a></h1>
+    <img src="img/donation.PNG" alt="Donation banner">
+
+    <h1>What Is a Charitable Donation?</h1>
+    <img src="img/cc7.jpeg" alt="Charity explanation">
+
+    <ul>
+      <li>A charitable donation is a gift of cash or property made to a nonprofit organization to help it accomplish its goals. In the U.S., these donations may be tax-deductible.</li>
+    </ul>
+
+    <h1>What is Our Organization About?</h1>
+    <img src="img/cc10.jfif" alt="Giving spirit">
+    <p>We are all about giving — we mean it.</p>
+
+    <img src="img/cc9.jfif" alt="Community gathering">
+    <ul>
+      <li>We gather generous people and go to areas in need.</li>
+      <img src="img/ws1.jfif" alt="In the field">
+
+      <li>We operate like a trust or foundation focused on charitable, religious, scientific, or educational purposes.</li>
+      <img src="img/cc7.jpeg" alt="Foundation info">
+
+      <li>We support civil defense volunteers and organizations through donations and services.</li>
+       <img src="img/wc3.jpg" alt="Orphanage activity">
+      <li>We collaborate with different companies (e.g., Polanco) to maximize impact.</li>
+    </ul>
+
+    <h1>Where We Go and What We Do</h1>
+    <img src="img/wc5.webp" alt="Volunteering">
+    <ul>
+      <li>Hospitals</li>
+      <img src="img/ch1.webp" alt="Hospital visit">
+
+      <li>Orphanages</li>
+      <img src="img/wc2.png" alt="Orphanage visit">
+      <li>Public Schools — providing scholarships and supplies</li>
+      <img src="img\ws1.jfif" alt="School donation">
+
+      <li>Ghetto and poor areas — building new infrastructures</li>
+       <img src="img/charity 2.jfif" alt="Food drive">
+      <p>Together with a team of generous people, we build hope...</p>
+      <img src="img/c,b1.jfif" alt="Construction work">
+
+      <li>Food distribution to the less privileged</li>
+      <img src="img/charity 1.jfif" alt="Food donation">
+     
+      <img src="img/charity 3.jfif" alt="Feeding the hungry">
+
+      <li>Building housing shelters for homeless children</li>
+      <img src="img/c,b1.jfif" alt="Shelter project">
+    </ul>
+
+     <a class="donate-link" id="donate" href="PAYMENT.html">Click Here to Donate</a>
+
+    <footer>
+      In cooperation with educational boards.
+    </footer>
+  </div>
+
+  <!-- JavaScript Slideshow Logic -->
+  <script>
+    window.onload = function() {
+      const images = [
+        "img/cc4.jpg",
+        "img/cc5.jpg",
+        "img/wc2.png",
+        "img/cc7.jpeg",
+        "img/cc10.jfif"
+      ];
+
+      let current = 0;
+      const slide = document.getElementById("slide");
+
+      setInterval(() => {
+        current = (current + 1) % images.length;
+        slide.src = images[current];
+      }, 3000); // 3 seconds
+    };
+  </script>
+</body>
+</html>
